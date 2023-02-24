@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Shantell+Sans&display=swap');
+body{
+  font-family: 'Shantell Sans', cursive;
+}
+nav {
+  display: flex;
+  justify-content: center;
+}
+.decoContainer{
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 2%;
+  padding-right: 2%;
+}
+.buttonContainer {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  padding-bottom: 5%;
+}
+
+
+.button-52 {
+  color: white;
+  font-size: 16px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  padding: 13px 20px 13px;
+  outline: 0;
+  border: 1px solid black;
+  cursor: pointer;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  font-family: 'Shantell Sans', cursive;
+}
+
+.button52div{
+  padding-top:2%;
+}
+.button-52:after {
+  content: "";
+  background-color: #FF69B4;
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: 7px;
+  left: 7px;
+  transition: 0.2s;
+}
+
+.button-52:hover:after {
+  top: 0px;
+  left: 0px;
+}
+
+@media (min-width: 768px) {
+  .button-52 {
+    padding: 13px 50px 13px;
+  }
+}
+
+/* form */
+.regContainer {
+  display: flex;
+  padding-top: 3%;
+  justify-content: center;
+  display: hidden;
+  
+}
+#coMsg, #regMsg{
+  font-size: 22px;
+  text-decoration: underline;
+}
+#regForm {
+  display: flex;
+  padding-left: 50%;
+  padding-right: 50%;
+  padding: 5%;
+  justify-items: center;
+  flex-direction: column;
+  border: #2c5777 2px solid;
+  border-bottom-left-radius: 15px 255px;
+  border-bottom-right-radius: 225px 15px;
+  border-top-left-radius: 255px 15px;
+  border-top-right-radius: 15px 225px;
+  box-shadow: rgba(0, 0, 0, .6) 8px 16px 16px -5px;
+  
+}
+#regForm input{
+  font-family: 'Shantell Sans', cursive;
+}
+.main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.coContainer {
+  display: flex;
+  padding-top: 3%;
+  display: none;
+  justify-content: center;
+  
+}
+
+#coForm {
+  display: flex;
+  padding-left: 50%;
+  padding-right: 50%;
+  padding: 5%;
+  justify-items: center;
+  flex-direction: column;
+  border: #2c5777 2px solid;
+  border-bottom-left-radius: 15px 255px;
+  border-bottom-right-radius: 225px 15px;
+  border-top-left-radius: 255px 15px;
+  border-top-right-radius: 15px 225px;
+  box-shadow: rgba(0, 0, 0, .6) 8px 16px 16px -5px;
+}
+#coForm input{
+  font-family: 'Shantell Sans', cursive;
+}
+/* input task */
+.group        { 
+  position:relative; 
+  margin-bottom:45px; 
+  padding-top : 5%;
+}
+input         {
+  font-size:18px;
+  padding:10px 10px 10px 5px;
+  display:block;
+  width:300px;
+  border:none;
+  border-bottom:1px solid #757575;
+  font-family: 'Shantell Sans', cursive;
+}
+input:focus     { outline:none; }
+
+/* LABEL ======================================= */
+label          {
+  color:#999; 
+  font-size:18px;
+  font-weight:normal;
+  position:absolute;
+  pointer-events:none;
+  left:5px;
+  top:10px;
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+
+/* active state */
+input:focus ~ label, input:valid ~ label    {
+  top:-20px;
+  font-size:14px;
+  color:#FF69B4;
+}
+
+/* BOTTOM BARS ================================= */
+.bar  { position:relative; display:block; width:300px; }
+.bar:before, .bar:after   {
+  content:'';
+  height:2px; 
+  width:0;
+  bottom:1px; 
+  position:absolute;
+  background:#FF69B4; 
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+.bar:before {
+  left:50%;
+}
+.bar:after {
+  right:50%; 
+}
+
+/* active state */
+input:focus ~ .bar:before, input:focus ~ .bar:after {
+  width:50%;
+}
+
+/* HIGHLIGHTER ================================== */
+.highlight {
+  position:absolute;
+  height:60%; 
+  width:100px; 
+  top:25%; 
+  left:0;
+  pointer-events:none;
+  opacity:0.5;
+}
+
+
+/* task display  */
+
+.inputDiv button{
+  font-family: 'Shantell Sans', cursive;
+
+}
+
+.todoContainer h1{
+  font-size: 72px;
+  display: flex;
+  justify-content: center;
+  
+}
+.todoContainer h2{
+  font-size: 56px;
+  
+}
+.inProgress{
+  display: flex;
+  justify-content: center;
+}
+.inProgressDisplay{
+  padding-top: 5%;
+  display: grid;
+  grid-template-columns: 256px 256px 256px 256px;
+  grid-template-rows: 147,16px 147,16px auto;
+  column-gap: 20px;
+  row-gap: 20px;
+}
+.taskDisplay{
+  font-size: 24px;
+  border: 2px solid black;
+  box-shadow: rgba(0, 0, 0, .6) 8px 16px 16px -5px;
+  border-bottom-left-radius: 15px 255px;
+  border-bottom-right-radius: 225px 15px;
+  border-top-left-radius: 255px 15px;
+  border-top-right-radius: 15px 225px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+}
+
+
+.taskDisplay p{
+  display: flex;
+  justify-content: center;
+  
+}
+.completed{
+  display: flex;
+  justify-content: center;
+}
+.completedDisplay{
+  padding-top: 5%;
+  padding-top: 5%;
+  display: grid;
+  grid-template-columns: 256px 256px 256px 256px;
+  grid-template-rows: 147,16px 147,16px auto;
+  column-gap: 20px;
+  row-gap: 20px;
+
+  
+}
+.btnDiv{
+  display: flex;
+  justify-content: space-evenly;
+  padding: 3%;
+  
+}
+.btnDiv button{
+  padding: 3%;
+  font-family: 'Shantell Sans', cursive;
+  
+}
+
+.button-55 {
+  align-self: center;
+  background-color: #fff;
+  background-image: none;
+  background-position: 0 90%;
+  background-repeat: repeat no-repeat;
+  background-size: 4px 3px;
+  border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
+  border-style: solid;
+  border-width: 2px;
+  box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
+  box-sizing: border-box;
+  color: #41403e;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Neucha, sans-serif;
+  font-size: 1rem;
+  line-height: 23px;
+  outline: none;
+  padding: .75rem;
+  text-decoration: none;
+  transition: all 235ms ease-in-out;
+  border-bottom-left-radius: 15px 255px;
+  border-bottom-right-radius: 225px 15px;
+  border-top-left-radius: 255px 15px;
+  border-top-right-radius: 15px 225px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-55:hover {
+  box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
+  transform: translate3d(0, 2px, 0);
+}
+
+.button-55:focus {
+  box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
+}
